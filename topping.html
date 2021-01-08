@@ -1,0 +1,237 @@
+<html>
+<head>
+<title>Topping/My Iscream</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body style="background-color:#E8ADAA;">
+<body>
+<header>
+<a href="index.html">HOME</a>
+<a href="background.html">BACKGROUND</a>
+<a href="flavour.html">FLAVOUR</a>
+<a href="topping.html">TOPPING</a>
+<a href="feedback.html">FEEDBACK</a>
+<a href="contact.html">CONTACT</a>
+<br>
+<br>
+<marquee><center><i><h1> Choose Your Favourite Topping!</i> </h1></center></marquee>
+<br>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+
+.row {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: right;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: #FFF380;
+  padding: 10px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #FFF380;
+}
+
+.btn.active {
+  background-color: #C48189;
+  color: white;
+}
+
+</style>
+</head>
+<body>
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show All</button>
+  <button class="btn" onclick="filterSelection('original')"> Original</button>
+  <button class="btn" onclick="filterSelection('classic')"> Classic</button>
+  <button class="btn" onclick="filterSelection('new')">New</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+ 
+<div class="row">
+  <div class="column original">
+    <div class="content">
+      <img src="images/sb.jpg" alt="Strawberry" style="width:100%">
+         </div>
+<form action="/action_page.php">
+  <input type="checkbox" id="I want Strawberry" name="I want Strawberry" value="I want Strawberry">
+  <label for="I want Strawberry"> I Want Strawberry (+RM0.50)</label><br>
+</form>
+  </div>
+
+  <div class="column original">
+    <div class="content">
+    <img src="images/oreo.png" alt="Oreo" style="width:100%">
+          </div>
+<form action="/action_page.php">
+  <input type="checkbox" id="I want oreo" name="I want oreo" value="I want oreo">
+  <label for="i want oreo"> I Want Oreo (+RM0.50)</label><br>
+</form>
+  </div>
+  <div class="column original">
+    <div class="content">
+    <img src="images/choki.jpg" alt="Choki" style="width:100%">
+    </div>
+<form action="/action_page.php">
+  <input type="checkbox" id="I want Choki-Choki" name="I want Choki-Choki" value="I want Choki-Choki">
+  <label for="I want Choki-Choki"> I Want Choki-Choki(+RM0.50)</label><br>
+</form>
+  </div>
+  
+  <div class="column classic">
+    <div class="content">
+      <img src="images/kiwi.jpg" alt="Kiwi" style="width:100%">
+       </div>
+<form action="/action_page.php">
+  <input type="checkbox" id="I want kiwi" name="I want kiwi" value="I want kiwi">
+  <label for="I want kiwi"> I Want Kiwi(+RM0.50)</label><br>
+</form>
+  </div>
+
+  <div class="column classic">
+    <div class="content">
+    <img src="images/mango.jpg" alt="mango" style="width:100%">
+          </div>
+<form action="/action_page.php">
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="I want Mango">
+  <label for="I want Mango"> I Want Mango (+RM0.50)</label><br>
+</form>
+
+  </div>
+
+  <div class="column classic">
+    <div class="content">
+    <img src="images/bbr.jpg" alt="Blueberry" style="width:100%">
+       </div>
+<form action="/action_page.php">
+  <input type="checkbox" id="I want Blueberry" name="I want Blueberry" value="I want Blueberry">
+  <label for="I want Blueberry"> I Want Blueberry (+RM0.50)</label><br>
+</form>
+  </div>
+
+  <div class="column new">
+    <div class="content">
+    <img src="images/marsh.jpg" alt="Marshmellow" style="width:100%">
+        </div>
+<form action="/action_page.php">
+  <input type="checkbox" id="I want Marshmellow" name="I want Marshmellow" value="I want Marshmellow">
+  <label for="I want Marshmellow"> I Want Marshmellow (+RM0.50)</label><br>
+</form>
+  </div>
+</div>
+<div class="container">
+<input type="submit" value="Submit">
+</div>
+</form>
+
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+</body>
+</html>

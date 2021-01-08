@@ -1,0 +1,121 @@
+{
+margin: 0;
+padding: 0;
+}
+
+header
+{
+height: 100vh;
+background-size: cover;
+background-position: right;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+a:link 
+{
+  color: black;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  list-style-type: none;
+  margin-top: 10px;
+  background-color: corn yellow;
+  transition: 0.2s ease;
+}
+
+a:hover 
+{
+  background-color:#FFF380;
+}
+
+a:visited
+{
+  color: #7E3817;
+}
+
+body {
+  margin: 0;
+}
+footer {
+    height: 20px;
+    position: fixed;
+    bottom: 0;
+    transition: bottom 0.2s ease-in-out;
+    width: 100%;
+}
+
+.nav-down {
+    bottom: -30px;
+}
+
+
+body {font-family: Arial, Helvetica, sans-serif;}
+
+form {
+  border: 3px solid #FFF380;
+  font-family: Arial;
+}
+
+
+
+input[type=text], input[type=submit] {
+  width: 20%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+input[type=checkbox] {
+  margin-top: 16px;
+}
+
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+
+input[type=submit] {
+  background-color: #C48189;
+  color: white;
+  border: none;
+}
+IFFAH CONTACT/topping
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+
+
+
+
+IZNI
+
+

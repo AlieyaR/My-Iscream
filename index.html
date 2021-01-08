@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>homepage/My Iscream</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<header>
+<a href="index.html">HOME</a>
+<a href="background.html">BACKGROUND</a>
+<a href="flavour.html">FLAVOUR</a>
+<a href="topping.html">TOPPING</a>
+<a href="feedback.html">FEEDBACK</a>
+<a href="contact.html">CONTACT</a>
+<br>
+<body bgcolor= #E8ADAA>
+<br>
+<iframe scrolling="no" frameborder="no" clocktype="html5" style="overflow:hidden;border:0;margin:0;padding:0;width:240px;height:25px;"src="https://www.clocklink.com/html5embed.php?clock=018&timezone=Malaysia_KualaLumpur&color=gray&size=240&Title=&Message=&Target=&From=2021,1,1,0,0,0&DateFormat=yyyy / mm / dd DDD&TimeFormat=hh:mm:ss TT&Color=gray"></iframe>
+<br>
+  <img class="mySlides" src="images/h1.png" style="width:100%">
+  <img class="mySlides" src="images/h2.png" style="width:100%">
+  <img class="mySlides" src="images/h3.png" style="width:100%">
+  <img class="mySlides" src="images/h4.png" style="width:100%">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+}
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 6 seconds
+}
+</script>
+<br>
+<form action="/action_page.php">
+<div class="container">
+</div>
+
+<div class="container" style="background-color:white">
+    <h2>SUBSCRIBE TO OUR NEWSLETTER</h2>
+    <p>Subbscribe to our email newsletter to receive updates on the latest news and special offer! </p>
+    <input type="text" placeholder="Name" name="name" required>
+    <input type="text" placeholder="Email address" name="mail" required>
+    <label>
+      <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+    </label>
+</div>
+
+<div class="container">
+<input type="submit" value="Subscribe">
+</div>
+</form>
+<br>
+<a href="https://www.instagram.com/my_iscream/" target="_blank"><center><img src="images/ig.png"></a>
+<a href="http://wasap.my/0194179414" target="_blank"><img src="images/ws.png"></a>
+<a href="https://www.facebook.com/afinaazlee" target="_blank"><img src="images/fb.png"></a>
+<script type="text/javascript" src="https://freehitcounters.org/count/82hs"></script><br>
+<a href='http://www.counter-zaehler.de'>besucherzähler web</a> <script type='text/javascript' src='https://www.whomania.com/ctr?id=bad09f125cfc0792bad534aee425d112070c2a8f'></script>
+<br>
+<div class="copyright">
+©2020 My Iscream. All rights reserved.					
+</div>
+<footer class="nav-down"></footer> 
+<style>
+.container {
+  padding: 20px;
+  background-color: #FFF380;
+}
+</style>
+</body>
+</html>
